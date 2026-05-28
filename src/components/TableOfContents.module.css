@@ -1,0 +1,79 @@
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.tocHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--surface-alt);
+}
+
+.tocLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.tocCount {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+.tocList {
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+.tocLink {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  border-left: 2px solid transparent;
+}
+
+.tocLink:hover {
+  background: var(--accent-pale);
+  border-left-color: var(--accent-light);
+}
+
+.tocLink.active {
+  background: var(--accent-pale);
+  border-left-color: var(--accent);
+}
+
+.tocLink.active .tocNum {
+  color: var(--accent);
+}
+
+.tocLink.active .tocTitle {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.tocNum {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  min-width: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+
+.tocTitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+  transition: color 0.15s;
+}
