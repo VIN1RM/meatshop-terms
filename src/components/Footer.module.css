@@ -22,7 +22,20 @@
 }
 
 .brandIcon {
-  font-size: 1.3rem;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  box-shadow: 0 2px 8px rgba(184, 77, 30, 0.2);
+}
+
+.brandLogo {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
 }
 
 .brandName {

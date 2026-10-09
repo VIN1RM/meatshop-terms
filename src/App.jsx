@@ -64,7 +64,7 @@ export default function App() {
           <div className={styles.content}>
             <div className={styles.intro}>
               <p className={styles.introText}>
-                Bem-vindo aos Termos de Uso do MeatShop. Leia com atenção antes de utilizar nossa plataforma. Em caso de dúvidas, acesse o suporte pelo aplicativo.
+                Estes Termos abrangem o aplicativo, o painel web e os participantes da operação MeatShop. Leia o documento integralmente antes de utilizar a Plataforma.
               </p>
             </div>
 

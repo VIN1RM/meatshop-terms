@@ -1,11 +1,14 @@
 import styles from './Header.module.css'
+import { DOCUMENT_META } from '../data'
 
 export default function Header({ scrolled, onMenuClick }) {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`} id="top">
       <div className={styles.inner}>
         <a href="#top" className={styles.brand}>
-          <div className={styles.brandIcon}>🥩</div>
+          <div className={styles.brandIcon}>
+            <img className={styles.brandLogo} src='/meatshop-logo.png' alt='' />
+          </div>
           <div className={styles.brandText}>
             <span className={styles.brandName}>MeatShop</span>
             <span className={styles.brandSub}>Açougues Online</span>
@@ -17,15 +20,15 @@ export default function Header({ scrolled, onMenuClick }) {
           <h1 className={styles.title}>Termos de Uso</h1>
           <div className={styles.meta}>
             <span className={styles.metaItem}>
-              <span className={styles.metaLabel}>Versão</span> 2.1.0
+              <span className={styles.metaLabel}>Versão</span> {DOCUMENT_META.version}
             </span>
             <span className={styles.metaDot}>·</span>
             <span className={styles.metaItem}>
-              <span className={styles.metaLabel}>Atualizado em</span> 27 de maio de 2026
+              <span className={styles.metaLabel}>Atualizado em</span> {DOCUMENT_META.updatedAt}
             </span>
             <span className={styles.metaDot}>·</span>
             <span className={styles.metaItem}>
-              <span className={styles.metaLabel}>Plataforma</span> Android &amp; iOS
+              <span className={styles.metaLabel}>Plataforma</span> {DOCUMENT_META.platform}
             </span>
           </div>
         </div>

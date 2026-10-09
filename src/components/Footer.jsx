@@ -1,11 +1,14 @@
 import styles from './Footer.module.css'
+import { DOCUMENT_META } from '../data'
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <div className={styles.brandIcon}>🥩</div>
+          <div className={styles.brandIcon}>
+            <img className={styles.brandLogo} src='/meatshop-logo.png' alt='' />
+          </div>
           <div>
             <div className={styles.brandName}>MeatShop</div>
             <div className={styles.brandSub}>Açougues Online</div>
@@ -13,10 +16,10 @@ export default function Footer() {
         </div>
         <div className={styles.divider} />
         <p className={styles.copy}>
-          Versão 2.1.0 &nbsp;·&nbsp; Maio de 2026 &nbsp;·&nbsp; Todos os direitos reservados
+          Versão {DOCUMENT_META.version} &nbsp;·&nbsp; Outubro de 2026 &nbsp;·&nbsp; Todos os direitos reservados
         </p>
         <p className={styles.legal}>
-          Foro da comarca de Anápolis — GO &nbsp;·&nbsp; Sujeito às leis brasileiras
+          Sujeito às leis brasileiras &nbsp;·&nbsp; Direitos do consumidor preservados
         </p>
       </div>
     </footer>
