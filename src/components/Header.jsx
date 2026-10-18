@@ -1,5 +1,5 @@
 import styles from './Header.module.css'
-import { DOCUMENT_META } from '../data'
+import { DOCUMENT_META, SELECTED_DOCUMENT } from '../data'
 
 export default function Header({ scrolled, onMenuClick }) {
   return (
@@ -17,7 +17,7 @@ export default function Header({ scrolled, onMenuClick }) {
 
         <div className={styles.center}>
           <span className={styles.badge}>Documento Legal</span>
-          <h1 className={styles.title}>Termos de Uso</h1>
+          <h1 className={styles.title}>{SELECTED_DOCUMENT?.title}</h1>
           <div className={styles.meta}>
             <span className={styles.metaItem}>
               <span className={styles.metaLabel}>Versão</span> {DOCUMENT_META.version}

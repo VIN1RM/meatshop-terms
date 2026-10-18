@@ -16,9 +16,9 @@ export default function Footer() {
         </div>
         <div className={styles.divider} />
         <p className={styles.copy}>
-          Versão {DOCUMENT_META.version} &nbsp;·&nbsp; Outubro de 2026 &nbsp;·&nbsp; Todos os direitos reservados
+          Versão {DOCUMENT_META.version} &nbsp;·&nbsp; 18 de outubro de 2026 &nbsp;·&nbsp; Todos os direitos reservados
         </p>
-        <p className={styles.legal}>
+        <p className={styles.legal}><a href="mailto:viniciusrodri0809@gmail.com">Contato do criador</a><br />
           Sujeito às leis brasileiras &nbsp;·&nbsp; Direitos do consumidor preservados
         </p>
       </div>

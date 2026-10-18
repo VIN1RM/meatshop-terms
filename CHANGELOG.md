@@ -1,8 +1,21 @@
 # Changelog
 
-Todas as alterações relevantes do site e do documento de Termos de Uso do MeatShop serão registradas neste arquivo.
+Todas as mudanças notáveis são documentadas conforme Keep a Changelog e Semantic Versioning.
 
-O formato segue os princípios do Keep a Changelog e o versionamento segue o Versionamento Semântico.
+## [3.2.0] - 2026-10-18 - Termos e privacidade
+
+### Adicionado
+
+- Documentos separados para uso da plataforma, privacidade e operação de estabelecimentos.
+- Versões jurídicas identificadas por data, independentes da versão da aplicação.
+- Catálogo estático com hash SHA-256, links por documento e versão e arquivo público preservado.
+- Contato provisório do criador para suporte e solicitações sobre dados pessoais.
+- Testes de integridade do conteúdo e equivalência do arquivo público.
+
+### Alterado
+
+- Alterações relevantes passam a exigir nova confirmação explícita na aplicação.
+- Fonte da versão anterior preservada em `src/archive/data-3.0.0.js`.
 
 ## [3.0.0] - 2026-10-09
 

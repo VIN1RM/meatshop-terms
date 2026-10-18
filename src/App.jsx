@@ -1,24 +1,22 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import TableOfContents from './components/TableOfContents'
 import Section from './components/Section'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import MobileNav from './components/MobileNav'
-import { SECTIONS } from './data'
+import { SECTIONS, DOCUMENTS, SELECTED_DOCUMENT } from './data'
 import styles from './App.module.css'
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('s1')
   const [showMobileNav, setShowMobileNav] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const sectionRefs = useRef({})
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 60)
 
-      // Find active section
       const sectionIds = SECTIONS.map(s => s.id)
       for (let i = sectionIds.length - 1; i >= 0; i--) {
         const el = document.getElementById(sectionIds[i])
@@ -36,6 +34,8 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  if (!SELECTED_DOCUMENT) return <main><h1>Documento não encontrado</h1><a href='/'>Consultar documentos vigentes</a></main>
+
   return (
     <div className={styles.app}>
       <Header scrolled={scrolled} onMenuClick={() => setShowMobileNav(true)} />
@@ -50,7 +50,6 @@ export default function App() {
 
       <main className={styles.main}>
         <div className={styles.layout}>
-          {/* Sidebar TOC — visible on large screens */}
           <aside className={styles.sidebar}>
             <div className={styles.sidebarSticky}>
               <TableOfContents
@@ -59,12 +58,13 @@ export default function App() {
               />
             </div>
           </aside>
-
-          {/* Content */}
           <div className={styles.content}>
             <div className={styles.intro}>
+              <nav aria-label="Documentos legais" className={styles.documentNav}>
+                {DOCUMENTS.map(document => <a key={document.kind} aria-current={document.kind === SELECTED_DOCUMENT.kind ? 'page' : undefined} href={`?document=${document.kind}&version=${document.version}`}>{document.title}</a>)}
+              </nav>
               <p className={styles.introText}>
-                Estes Termos abrangem o aplicativo, o painel web e os participantes da operação MeatShop. Leia o documento integralmente antes de utilizar a Plataforma.
+                Consulte os documentos do MeatShop e as versões apresentadas nos fluxos de aceite. Contato provisório do criador: viniciusrodri0809@gmail.com.
               </p>
             </div>
 
