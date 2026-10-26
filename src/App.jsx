@@ -6,12 +6,17 @@ import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
 import MobileNav from './components/MobileNav'
 import { SECTIONS, DOCUMENTS, SELECTED_DOCUMENT } from './data'
+import { buildDocumentTitle } from './documentTitle'
 import styles from './App.module.css'
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('s1')
   const [showMobileNav, setShowMobileNav] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    document.title = buildDocumentTitle(SELECTED_DOCUMENT)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
