@@ -1,5 +1,11 @@
 # Releases dos documentos legais
 
+## 3.3.0 — Título por documento
+
+Trabalho preparado em 26 de outubro de 2026.
+
+A aba do navegador passa a mostrar o nome do documento aberto, o que facilita identificar os Termos de Uso, a Política de Privacidade e os Termos para Estabelecimentos quando mais de um está aberto. O conteúdo jurídico e a versão `2026-10-18` permanecem os mesmos. Não houve publicação ou deploy nesta preparação.
+
 ## 3.2.0 — Termos e privacidade
 
 Trabalho preparado em 18 de outubro de 2026.

@@ -2,6 +2,18 @@
 
 Todas as mudanças notáveis são documentadas conforme Keep a Changelog e Semantic Versioning.
 
+## [3.3.0] - 2026-10-26 - Título por documento
+
+### Alterado
+
+- O título da aba do navegador passa a identificar o documento aberto (Termos de Uso, Política de Privacidade ou Termos para Estabelecimentos), com título próprio para documento não encontrado.
+
+### Qualidade
+
+- Testes do título para cada documento, documento inexistente e títulos personalizados.
+
+O conteúdo jurídico e a versão `2026-10-18` dos documentos não foram alterados.
+
 ## [3.2.0] - 2026-10-18 - Termos e privacidade
 
 ### Adicionado
