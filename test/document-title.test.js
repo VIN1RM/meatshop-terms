@@ -15,3 +15,11 @@ test('document title follows the opened legal document', () => {
 test('document title reports a missing document', () => {
   assert.equal(buildDocumentTitle(undefined), 'Documento não encontrado — MeatShop')
 })
+
+test('document title reports a null document', () => {
+  assert.equal(buildDocumentTitle(null), 'Documento não encontrado — MeatShop')
+})
+
+test('document title preserves custom document names', () => {
+  assert.equal(buildDocumentTitle({ title: 'Custom terms' }), 'Custom terms — MeatShop')
+})
